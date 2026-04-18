@@ -9,7 +9,7 @@ Ce projet présente une mini application PHP/MySQL conteneurisée avec Docker Co
 - scripts : automatisation du déploiement
 
 ## Lancement manuel
-docker compose up -d --build
+sudo docker-compose up -d --build
 
 ## Lancement automatisé
 ./scripts/deploy.sh

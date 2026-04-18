@@ -62,6 +62,7 @@ $produits = $pdo->query("
                     <th>Prix</th>
                     <th>Quantité</th>
                     <th>Catégorie</th>
+                    <th>Statut</th>
                 </tr>
             </thead>
             <tbody>
@@ -72,6 +73,7 @@ $produits = $pdo->query("
                     <td><?= number_format($produit['prix'], 2) ?> DH</td>
                     <td><?= $produit['quantite'] ?></td>
                     <td><?= htmlspecialchars($produit['nom_categorie']) ?></td>
+                    <td><?= ($produit['quantite'] > 0) ? 'En stock' : 'Rupture' ?></td>
                 </tr>
                 <?php endforeach; ?>
             </tbody>
